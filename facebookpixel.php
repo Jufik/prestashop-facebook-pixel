@@ -48,7 +48,7 @@ class Googleanalytics extends Module
 		$this->description = $this->l('This is the Facebook extension for Prestashop');
 
 		$this->confirmUninstall = $this->l('Are you sure you want to uninstall Facebook Pixel?');
-
+ 		!Configuration::updateValue('facebookpixel', 'OK')
 	}
 
 	/**
@@ -83,7 +83,7 @@ class Googleanalytics extends Module
 		if (!parent::uninstall() ||
 			!Configuration::deleteByName('facebook_pixel_active') ||
 			!Configuration::deleteByName('facebook_pixel_id')
-
+			!Configuration::deleteByName('facebookpixel')
 		)
 		return false;
 
