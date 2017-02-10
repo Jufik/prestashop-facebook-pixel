@@ -27,10 +27,10 @@
 if (!defined('_PS_VERSION_'))
 	exit;
 
-class Googleanalytics extends Module
+class Facebookpixel extends Module
 {
 	/**
-	* initiate Google Analytics module
+	* initiate Facebookpixel  module
 	*/
 	public function __construct()
 	{
@@ -158,7 +158,7 @@ class Googleanalytics extends Module
 					),
 					'hint' => $this->l('Enable or disable Facebook Pixel')
 				),
-				//add google analytics
+				//add Facebookpixel
 				array(
 					'type' => 'text',
 					'label' => $this->l('Web Tracking Id'),
